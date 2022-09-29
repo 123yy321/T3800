@@ -14,6 +14,8 @@ namespace T3800
     {
         public Form1()
         {
+            //初始化
+
             InitializeComponent();
         }
     }
