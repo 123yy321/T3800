@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,21 +9,33 @@ namespace T3800.T3800.SqlService
 {
     class SQLConnect
     {
-        public SQLConnect connect;
+        public SQLConnect _Connect;
+        public SQLiteConnection _ConnectionDB;
         public SQLConnect()
         {
-
+            this.SetSQLiteConnection("");
         }
 
-        public SQLConnect GetSQLConnect()
+        public SQLConnect GetSQLConnectInstance()
         {
-            if (connect == null)
+            if (_Connect == null)
             {
-                connect = new SQLConnect();
+                _Connect = new SQLConnect();
             }
-            return this.connect;
+            return this._Connect;
         }
 
-        
+        public void SetSQLiteConnection(string connectString)
+        {
+            if (!string.IsNullOrWhiteSpace(connectString))
+            {
+                _ConnectionDB = new SQLiteConnection(connectString);
+                _ConnectionDB.Open();
+            }
+            else
+            {
+                _ConnectionDB = null;
+            }
+        }
     }
 }
