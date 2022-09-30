@@ -69,6 +69,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="T3800.SqlService\SQLConnect.cs" />
+    <Compile Include="T3800.SqlService\SQLHelper.cs" />
     <Compile Include="T3800\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +88,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="T3800\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,7 +108,6 @@
   <ItemGroup>
     <Folder Include="T3800.Control\" />
     <Folder Include="T3800.PLC\" />
-    <Folder Include="T3800.SqlService\" />
     <Folder Include="T3800.UI\" />
   </ItemGroup>
   <ItemGroup>

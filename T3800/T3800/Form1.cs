@@ -18,5 +18,11 @@ namespace T3800
 
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.MaximizedBounds = Screen.PrimaryScreen.WorkingArea;
+        }
     }
 }
