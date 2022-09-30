@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using T3800.T3800.SqlService;
 
 namespace T3800
 {
@@ -23,6 +24,11 @@ namespace T3800
         {
             this.WindowState = FormWindowState.Maximized;
             this.MaximizedBounds = Screen.PrimaryScreen.WorkingArea;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SQLConnect.GetSQLConnectInstance();
         }
     }
 }
