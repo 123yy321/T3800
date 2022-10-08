@@ -223,18 +223,6 @@
     </Compile>
     <Compile Include="T3800.SqlService\SQLConnect.cs" />
     <Compile Include="T3800.SqlService\SQLHelper.cs" />
-    <Compile Include="T3800.UI\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="T3800.UI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="T3800.UI\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="T3800.UI\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="T3800\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +326,7 @@
   <ItemGroup>
     <Folder Include="T3800.Control\" />
     <Folder Include="T3800.PLC\" />
+    <Folder Include="T3800.UI\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
